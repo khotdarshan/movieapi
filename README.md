@@ -29,6 +29,10 @@ npm start
 
 This will run the backend server at localhost:7000. Please make sure to have MongoDB server running on default PORT 27017
 
+# Try executing api with POSTMAN Rest client
+
+**@https://github.com/khotdarshan/movieapi/blob/main/MovieDB_Request.postman_collection.json**
+
 # API Documentation 
 
 **@https://github.com/khotdarshan/movieapi/blob/main/MovieDB_API_Documentation.xlsx?raw=true**
