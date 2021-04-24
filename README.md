@@ -3,7 +3,7 @@
 # Introduction
 This is a nodejs rest API build for Movie DB application.
 
-# Framework
+# Framework & NPM Libraries
 
 1. Express JS - NodeJS Rest Framework
 2. bcrypt - Create Hash for Password
