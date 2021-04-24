@@ -18,4 +18,4 @@ npm start
 
 This will run the backend server at localhost:7000. Please make sure to have MongoDB server running on default PORT 27017
 
-Note: API Documentation 
+Note: API Documentation @https://github.com/khotdarshan/movieapi/blob/main/MovieDB_API_Documentation.xlsx?raw=true
