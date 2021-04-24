@@ -1,0 +1,11 @@
+import * as movieService from './service/movie';
+import express from 'express';
+import { movieObjectValidator, userIdValidator, reviewValidator, voteValidator } from './common/ValidatorMiddleware.js';
+const router = express.Router();
+router.post('/', movieObjectValidator, movieService.save);
+router.get('/', movieService.get);
+router.get('/:id', userIdValidator, movieService.getById);
+router.put('/:id', userIdValidator, movieService.update);
+router.put('/review/:id', userIdValidator, reviewValidator, movieService.updateReview);
+router.put('/vote/:id', userIdValidator, voteValidator, movieService.updateVote);
+export default router;

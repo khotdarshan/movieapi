@@ -1,0 +1,18 @@
+. CRUD API for Movie, User - DONE
+. Sort Movie - DONE
+. Filtering Movie & User - DONE (Movie Read API supports Pattern Searching by field name, like 3 letter of word)
+. Full Text Search - DONE (Limitations: Whole word search implemented, Pattern Search not implemented)
+. Custom Update API for 
+    -> Movie Review - DONE
+    -> User Favourite - DONE 
+    -> upvotes/downvotes - DONE (Limitations: Registered User will just will be able to increment upvotes/downvotes)
+. Custom Read API for GET Favourite Movies - DONE
+. Auth API for Login, Signup - DONE
+. Authentication - DONE
+. WhiteList Public APIs - DONE
+. Error handling - DONE
+. API Input Validation, MongoSchema Validation - DONE
+
+. Unit Testing
+. ReadMe
+. Publish to GIT & Deployment
