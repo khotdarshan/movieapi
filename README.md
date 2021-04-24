@@ -1,4 +1,4 @@
-# movieapi
+# Movie Database Rest API Backend
 
 # Introduction
 This is a nodejs rest API build for Movie DB application.
