@@ -1,0 +1,379 @@
+{
+	"variables": [],
+	"info": {
+		"name": "MovieDB Request",
+		"_postman_id": "a4989226-5e78-7d0c-6709-aa237d82cde4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movie CRUD API",
+			"description": "",
+			"item": [
+				{
+					"name": "Save Movie",
+					"request": {
+						"url": "localhost:7000/movie",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRhcnNoYW4gS2hvdCIsInBhc3N3b3JkIjoiJDJiJDEwJFByZUl4M1ZOZzVudnR0TnZxRzEydmVMck9tRC9INUZPTWx2ejd6cFdZUHNrZlRpSEl3QUZDIiwiaWF0IjoxNjE5MjM1NjMxfQ.sDAdJpvvfh08Uhv1kssl6znMQEvKG5vB_j_8ZJthT3k",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"SHREE GANESH\",\n\t\"genre\": \"Action\",\n\t\"releaseDate\": \"2021-04-31\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Movie",
+					"request": {
+						"url": "localhost:7000/movie",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movie by MovieId",
+					"request": {
+						"url": "localhost:7000/movie/608262a3be876c1d040bb3e5",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRhcnNoYW4gS2hvdCIsInBhc3N3b3JkIjoiJDJiJDEwJFByZUl4M1ZOZzVudnR0TnZxRzEydmVMck9tRC9INUZPTWx2ejd6cFdZUHNrZlRpSEl3QUZDIiwiaWF0IjoxNjE5MjM1NjMxfQ.sDAdJpvvfh08Uhv1kssl6znMQEvKG5vB_j_8ZJthT3k",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Movie",
+					"request": {
+						"url": "localhost:7000/movie/608394205964a35450d673ba",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRhcnNoYW4gS2hvdCIsInBhc3N3b3JkIjoiJDJiJDEwJFByZUl4M1ZOZzVudnR0TnZxRzEydmVMck9tRC9INUZPTWx2ejd6cFdZUHNrZlRpSEl3QUZDIiwiaWF0IjoxNjE5MjM1NjMxfQ.sDAdJpvvfh08Uhv1kssl6znMQEvKG5vB_j_8ZJthT3k",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"SHREE HANUMAN\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movie by Filter",
+					"request": {
+						"url": {
+							"raw": "localhost:7000/movie/?name=GAnesh",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"movie",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "GAnesh",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRhcnNoYW4gS2hvdCIsInBhc3N3b3JkIjoiJDJiJDEwJFByZUl4M1ZOZzVudnR0TnZxRzEydmVMck9tRC9INUZPTWx2ejd6cFdZUHNrZlRpSEl3QUZDIiwiaWF0IjoxNjE5MjM1NjMxfQ.sDAdJpvvfh08Uhv1kssl6znMQEvKG5vB_j_8ZJthT3k",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movie - Search & Sort By",
+					"request": {
+						"url": {
+							"raw": "localhost:7000/movie/?search=shree&sort=releaseDate&order=-1",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"movie",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "shree",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "sort",
+									"value": "releaseDate",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "order",
+									"value": "-1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRhcnNoYW4gS2hvdCIsInBhc3N3b3JkIjoiJDJiJDEwJFByZUl4M1ZOZzVudnR0TnZxRzEydmVMck9tRC9INUZPTWx2ejd6cFdZUHNrZlRpSEl3QUZDIiwiaWF0IjoxNjE5MjM1NjMxfQ.sDAdJpvvfh08Uhv1kssl6znMQEvKG5vB_j_8ZJthT3k",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Movie Review",
+					"request": {
+						"url": "localhost:7000/movie/review/608394205964a35450d673ba",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRhcnNoYW4gS2hvdCIsInBhc3N3b3JkIjoiJDJiJDEwJFByZUl4M1ZOZzVudnR0TnZxRzEydmVMck9tRC9INUZPTWx2ejd6cFdZUHNrZlRpSEl3QUZDIiwiaWF0IjoxNjE5MjM1NjMxfQ.sDAdJpvvfh08Uhv1kssl6znMQEvKG5vB_j_8ZJthT3k",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"review\": \"Awesome Movie\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Movie Vote",
+					"request": {
+						"url": "localhost:7000/movie/vote/608394faafc6240f4c764a80",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRhcnNoYW4gS2hvdCIsInBhc3N3b3JkIjoiJDJiJDEwJDR5WTh0V3o0RDMvYXN1cVRKRHYxSGVkMjRJUkRjRnNVeDhVbXBRVnRVVi8ycm1IT1J6RElTIiwiaWF0IjoxNjE5MjQ0OTg4fQ.8aSFrWpc6cj-qmlA6fxZOsCE4FYJXLx5zfZvzfn3W2I",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vote\": {\n    \t\"upvote\": true\n    }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User CRUD API",
+			"description": "",
+			"item": [
+				{
+					"name": "GET All User",
+					"request": {
+						"url": "localhost:7000/user",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRhcnNoYW4gS2hvdCIsInBhc3N3b3JkIjoiJDJiJDEwJDR5WTh0V3o0RDMvYXN1cVRKRHYxSGVkMjRJUkRjRnNVeDhVbXBRVnRVVi8ycm1IT1J6RElTIiwiaWF0IjoxNjE5MjQ0OTg4fQ.8aSFrWpc6cj-qmlA6fxZOsCE4FYJXLx5zfZvzfn3W2I",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Save User",
+					"request": {
+						"url": "localhost:7000/user",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRhcnNoYW4gS2hvdCIsInBhc3N3b3JkIjoiJDJiJDEwJEU1ajguamRXSUdLU3JjeC9KVXlHRk9xb0hrNnhJRjFOQ1FMY1hBMmUwLmNPVE9rVGN1SmtpIiwiaWF0IjoxNjE5MjM4MjU3fQ.5ceGT73VSnyVHSf1ipy0qeyq1zbesVfaBqE7T6jt9XU",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"Darshan\",\n\t\"password\": \"dkhot\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Id",
+					"request": {
+						"url": "localhost:7000/user/60839cfd79c25d6b50cbd794",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRhcnNoYW4gS2hvdCIsInBhc3N3b3JkIjoiJDJiJDEwJDR5WTh0V3o0RDMvYXN1cVRKRHYxSGVkMjRJUkRjRnNVeDhVbXBRVnRVVi8ycm1IT1J6RElTIiwiaWF0IjoxNjE5MjQ0OTg4fQ.8aSFrWpc6cj-qmlA6fxZOsCE4FYJXLx5zfZvzfn3W2I",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"url": "localhost:7000/user/608292992abdcf58d4a9ec42",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRhcnNoYW4gS2hvdCIsInBhc3N3b3JkIjoiJDJiJDEwJFRvVU9ua2oxcTVHT0w2MVpQdWlGak9PbGplVVVZRmdpVkxhWldkRnRaODlkMnlieEMyTzNhIiwiaWF0IjoxNjE5MjM3Njg5fQ.6CH4wIAaQxUi7ovMjlKOFphZUjJ6y4_eiCc1Q3TSnf4",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"favourites\": [\"Drama\", \"Action\"],\n    \"username\": \"Darshan Khot\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get User favourite Movies",
+					"request": {
+						"url": "localhost:7000/user/favourite/movie",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRhcnNoYW4gS2hvdCIsInBhc3N3b3JkIjoiJDJiJDEwJEU1ajguamRXSUdLU3JjeC9KVXlHRk9xb0hrNnhJRjFOQ1FMY1hBMmUwLmNPVE9rVGN1SmtpIiwiaWF0IjoxNjE5MjM4MjU3fQ.5ceGT73VSnyVHSf1ipy0qeyq1zbesVfaBqE7T6jt9XU",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AUTH API",
+			"description": "",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"url": "localhost:7000/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"Darshan Khot\",\n\t\"password\": \"dkhot\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"url": "localhost:7000/auth/logout",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRhcnNoYW4gS2hvdCIsInBhc3N3b3JkIjoiJDJiJDEwJFRvVU9ua2oxcTVHT0w2MVpQdWlGak9PbGplVVVZRmdpVkxhWldkRnRaODlkMnlieEMyTzNhIiwiaWF0IjoxNjE5MjM3Njg5fQ.6CH4wIAaQxUi7ovMjlKOFphZUjJ6y4_eiCc1Q3TSnf4",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
